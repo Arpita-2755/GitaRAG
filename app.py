@@ -131,19 +131,44 @@ else:
 
 st.markdown(f"""
 <style>
-    .main {{
-        background-color: {bg};
-        color: {text_color};
-    }}
-    .confidence-box {{
-        background-color: {confidence_bg};
-    }}
-    .verse-card {{
-        background-color: {card_bg};
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
-    }}
+
+/* Entire App Background */
+.stApp {{
+    background-color: {bg};
+    color: {text_color};
+}}
+
+/* Main container */
+.block-container {{
+    background-color: {bg};
+}}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {{
+    background-color: {card_bg};
+}}
+
+/* Text Input */
+.stTextInput input {{
+    background-color: {card_bg};
+    color: {text_color};
+    border-radius: 10px;
+}}
+
+/* Confidence Box */
+.confidence-box {{
+    background-color: {confidence_bg};
+}}
+
+/* Verse Card */
+.verse-card {{
+    background-color: {card_bg};
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+}}
+
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # -------------------------------------------------
