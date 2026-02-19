@@ -7,7 +7,7 @@ data/
 # Development-only scripts
 build_index.py
 prepare_dataset.py
-
+evaluation.py
 # Core dev modules (not needed for deployment)
 core/embedder.py
 core/indexer.py
@@ -15,7 +15,12 @@ core/indexer.py
 # Python cache
 __pycache__/
 *.pyc
-
+*.pyo
+*.pyd
+*.faiss
+*.npy
+.env
+.streamlit/secrets.toml
 # OS files
 .DS_Store
 Thumbs.db

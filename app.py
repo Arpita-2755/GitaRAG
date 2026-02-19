@@ -11,6 +11,23 @@ st.set_page_config(
     page_icon="🕉️",
     layout="wide"
 )
+# ------------------------------
+# Sidebar System Info
+# ------------------------------
+st.sidebar.title("🔬 System Information")
+
+st.sidebar.markdown("""
+**Mode:** Extractive RAG  
+**Embedding Model:** all-MiniLM-L6-v2  
+**Vector Index:** FAISS (Inner Product)  
+**Similarity Threshold:** 0.45  
+**Hallucination Risk:** Minimal  
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.success("✅ Fully Extractive Retrieval")
+st.sidebar.caption("No generative model used. Responses are grounded strictly in retrieved verses.")
+
 
 
 # -------------------------------------------------
@@ -173,6 +190,9 @@ if query:
             Confidence Score: {confidence_score} ({confidence_label})
         </div>
         """, unsafe_allow_html=True)
+
+        st.success("🛡 Grounded Response — Fully Extractive Retrieval (No Hallucinated Content)")
+
 
         # Top Verse
         st.markdown("### 📖 Doctrinal Insight")
