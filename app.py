@@ -166,6 +166,19 @@ section[data-testid="stSidebar"] {{
     box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
 }}
 
+/* Strong universal text color enforcement to avoid low-contrast fallback */
+.stApp, .stApp *, section[data-testid="stSidebar"], section[data-testid="stSidebar"] * {{
+    color: {text_color} !important;
+}}
+
+section[data-testid="stSidebar"] {{
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}}
+
+.stTextInput input, .stTextInput label, .stToggle, .stToggle * {{
+    color: {text_color} !important;
+}}
+
 </style>
 """, unsafe_allow_html=True)
 
